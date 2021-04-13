@@ -86,8 +86,8 @@ Output:
 */
 
 export function findTheCheese(arr) {
-    const cheese = arr.filter((object) => object.id === 'cheese');
-    return cheese[0];
+    const cheese = arr.find((object) => object.id === 'cheese');
+    return cheese;
 }
 
 
@@ -96,7 +96,14 @@ Output:
 ['apple', 'banana']
 */
 
+//export function listNamesOfAllFruits(arr) {
+//    const fruit = [];
+//    arr.forEach((object) => { 
+//       if (object.category === 'fruit') fruit.push(object.id);
+//    });
+//    return fruit;
+//}
+
 export function listNamesOfAllFruits(arr) {
-    const fruit = arr.filter((object) => object.category === 'fruit' && object.name);
-    return fruit;
+    return arr.filter((object) => object.category === 'fruit').map((object) => object.id);
 }

@@ -19,7 +19,13 @@ Output:
 */
 
 export function makeMoreScreamingKeys(someObject) {
-    return {};
+    const scream = {};
+    for(let key in someObject) {
+        let value = someObject[key];
+        let upperCaseKey = key.toUpperCase();
+        scream[upperCaseKey] = value
+    }
+    return scream;
 }
 
 /*
