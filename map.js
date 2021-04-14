@@ -61,7 +61,7 @@ Output:
 */
 
 export function makeStringArray(arr) {
-   JSON.stringify(arr);
+
 }
 
 /*
