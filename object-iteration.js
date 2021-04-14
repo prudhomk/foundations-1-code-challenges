@@ -23,7 +23,7 @@ export function makeMoreScreamingKeys(someObject) {
     for(let key in someObject) {
         let value = someObject[key];
         let upperCaseKey = key.toUpperCase();
-        scream[upperCaseKey] = value
+        scream[upperCaseKey] = value;
     }
     return scream;
 }
@@ -42,7 +42,11 @@ etc
 */
 
 export function makeWeirdStringFromKeys(someObject) {
-    return '';
+    for (let key in someObject) {
+        let value = someObject[key];
+        let strings = someObject.toString();
+    }
+    return 'strings';
 }
 
 
