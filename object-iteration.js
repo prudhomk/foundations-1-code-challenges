@@ -42,11 +42,11 @@ etc
 */
 
 export function makeWeirdStringFromKeys(someObject) {
-    for (let key in someObject) {
-        let value = someObject[key];
-        let strings = someObject.toString();
-    }
-    return 'strings';
+    Object.keys(someObject);
+    const name = Object.keys(someObject)[0];
+    const age = Object.keys(someObject)[1];
+    const type = Object.keys(someObject)[2];
+    return `${name} + ${age} + ${type}`
 }
 
 
@@ -60,5 +60,12 @@ Output:
 */
 
 export function makeTuples(someObject) {
-    return [];
-}
+    const tuples = [];
+    const keys = Object.keys(someObject);
+    const values = Object.values(someObject)
+    return tuples.map(item => ([tuples.push(keys)], [tuples.push(values)]));
+
+
+
+
+};
