@@ -51,11 +51,9 @@ Output:
 
 export function organizePricesByKey(arr) {
     const organize = {};
-    for(let key in arr) {
-        let value = arr[key];
-        arr.filter((object) => object.price);
-        
-    }
+    arr.forEach((item) => {
+      organize[item.id] = item.price;
+    });
     return organize;
 }
 

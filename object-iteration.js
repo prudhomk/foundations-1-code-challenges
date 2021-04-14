@@ -61,11 +61,14 @@ Output:
 
 export function makeTuples(someObject) {
     const tuples = [];
-    const keys = Object.keys(someObject);
-    const values = Object.values(someObject)
-    return tuples.map(item => ([tuples.push(keys)], [tuples.push(values)]));
-
-
+    //const keys = Object.keys(someObject);
+    //const values = Object.values(someObject)
+    //return tuples.map(item => ([tuples.push(keys)], [tuples.push(values)]));
+    for (const [key, value] of Object.entries(someObject)) {
+        tuples.push([key, value]);
+        
+    }
+    return tuples;
 
 
 };
